@@ -4,8 +4,8 @@
 
     <item
         android:id="@+id/action_go_to_fragment"
+        android:contentDescription="@string/fragment"
         android:icon="@drawable/ic_baseline_arrow_forward_24"
         android:title="@string/fragment"
-        UserList:showAsAction="ifRoom"
-        />
+        UserList:showAsAction="ifRoom|withText" />
 </menu>

@@ -22,16 +22,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var buttonFragment: Button
 
 
+    // Initialize Main Presenter and UI objects
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-         //DEPRECATED: setting toolbar
-        /*
-        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        */
-        //home navigation
-        // supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        supportActionBar?.setIcon(R.drawable.ic_baseline_arrow_forward_24)
+
         mainPresenter = MainPresenter(application)
 
         recyclerView = findViewById(R.id.recyclerViewActivity)
@@ -43,6 +40,13 @@ class MainActivity : AppCompatActivity() {
         fab.setOnClickListener {
             startActivity(Intent(this, AddUserActivity::class.java))
         }
+        //DEPRECATED: setting toolbar
+        /*
+        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        */
+        //home navigation
+        // supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
     override fun onStart() {
@@ -66,7 +70,8 @@ class MainActivity : AppCompatActivity() {
         super.onBackPressed()
     }
 
-    // For avoiding runtime errors the LiveData Observers need to be removed onStop and onDestroy
+    // For avoiding runtime errors
+    // LiveData Observers need to be removed onStop and onDestroy
     override fun onStop() {
         mainPresenter.totalUsers.removeObservers(this)
         super.onStop()
@@ -89,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        else -> {
+            else -> {
             super.onOptionsItemSelected(item)
         }
     }

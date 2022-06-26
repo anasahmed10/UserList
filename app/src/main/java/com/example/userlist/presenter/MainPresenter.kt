@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.LiveData
 import com.example.userlist.model.User
 
-// Presenter class that handles the database functions called in MainActivity
+// Presenter class that handles the database functions
 // Can either insert or delete users
 class MainPresenter(application: Application)  {
 

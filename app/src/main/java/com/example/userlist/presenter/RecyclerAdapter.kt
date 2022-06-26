@@ -30,8 +30,8 @@ class RecyclerAdapter(private var users: List<User>?) : RecyclerView.Adapter<Rec
         val itemPresenter = users?.get(position)
 
 
-        holder.userView.text = itemPresenter!!.userName
-        holder.phoneView.text = itemPresenter!!.phoneNumber
+        holder.userView.text = itemPresenter?.userName
+        holder.phoneView.text = itemPresenter?.phoneNumber
 
     }
 
