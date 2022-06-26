@@ -7,7 +7,7 @@ import android.content.Context
 import com.example.userlist.model.User
 import com.example.userlist.model.UserDao
 
-
+// Singleton class for initializing Room Database
 @Database(entities = [User::class], version = 1, exportSchema = false)
 abstract class RoomSingleton : RoomDatabase(){
     abstract fun userDao():UserDao

@@ -8,6 +8,7 @@ import androidx.room.TypeConverters
 import com.example.userlist.model.User
 import com.example.userlist.model.UserDao
 
+// Database class containing
 @Database(entities = [User::class], version = 1, exportSchema = false)
 // @TypeConverters(::class)
 abstract class AppDatabase : RoomDatabase() {

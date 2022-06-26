@@ -76,7 +76,7 @@ class MainFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance() =
-            ExampleFragment().apply {
+            MainFragment().apply {
                 arguments = Bundle().apply {
                 }
             }

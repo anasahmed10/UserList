@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         */
         //home navigation
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // supportActionBar?.setDisplayHomeAsUpEnabled(true)
         mainPresenter = MainPresenter(application)
 
         recyclerView = findViewById(R.id.recyclerViewActivity)
@@ -59,6 +59,11 @@ class MainActivity : AppCompatActivity() {
         })
 
         super.onResume()
+    }
+
+    override fun onBackPressed() {
+        finish()
+        super.onBackPressed()
     }
 
     // For avoiding runtime errors the LiveData Observers need to be removed onStop and onDestroy

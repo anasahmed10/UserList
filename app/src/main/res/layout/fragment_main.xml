@@ -20,6 +20,7 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/create_fab"
+            android:backgroundTint="@color/siera_yellow"
             android:layout_width="119dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
